@@ -1,10 +1,16 @@
 import { React } from "react";
-
+import PayPeriod from "./components/PayPeriod/PayPeriod";
+import Table from "./components/Table/Table";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">Learn React</header>
+      <div className="ui container">
+        <div>Learn React</div>
+        <PayPeriod />
+        <Table />
+      </div>
     </div>
   );
 }
