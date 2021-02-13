@@ -69,7 +69,7 @@ export default function DialogSelect() {
                 onChange={handleChange}
                 input={<Input id="demo-dialog-native" />}
               >
-                <option aria-label="None" value="" />
+                <option aria-label="none" value="" />
                 <option value={"Jan"}>Jan</option>
                 <option value={"Feb"}>Feb</option>
                 <option value={"Mar"}>Mar</option>
@@ -93,12 +93,12 @@ export default function DialogSelect() {
                 onChange={handleChange}
                 input={<Input id="demo-dialog-native" />}
               >
-                <option aria-label="None" value="" />
-                <option value={""}>2021</option>
-                <option value={""}>2020</option>
-                <option value={""}>2019</option>
-                <option value={""}>2018</option>
-                <option value={""}>2017</option>
+                <option aria-label="none" value="" />
+                <option value={"2021"}>2021</option>
+                <option value={"2020"}>2020</option>
+                <option value={"2019"}>2019</option>
+                <option value={"2018"}>2018</option>
+                <option value={"2017"}>2017</option>
               </Select>
             </FormControl>
 
