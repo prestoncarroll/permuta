@@ -49,7 +49,11 @@ export default function DialogSelect() {
   return (
     <div>
       <div className={classes.dropDown}>
-        <Button className={classes.dropDown} onClick={handleClickOpen}>
+        <Button
+          style={{ padding: "2%" }}
+          className={classes.dropDown}
+          onClick={handleClickOpen}
+        >
           time select
         </Button>
       </div>
