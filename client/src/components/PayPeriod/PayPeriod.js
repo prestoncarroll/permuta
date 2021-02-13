@@ -7,7 +7,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
-// import MenuItem from "@material-ui/core/MenuItem";
+import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 
@@ -32,8 +32,10 @@ export default function DialogSelect() {
   const [year, setYear] = React.useState("");
 
   const handleChange = (event) => {
-    setMonth(String(event.target.value) || "");
-    setYear(String(event.target.value) || "");
+    setMonth(Number(event.target.value) || "");
+  };
+  const handleChange1 = (event) => {
+    setYear(Number(event.target.value) || "");
   };
 
   const handleClickOpen = () => {
@@ -48,10 +50,9 @@ export default function DialogSelect() {
     <div>
       <div className={classes.dropDown}>
         <Button className={classes.dropDown} onClick={handleClickOpen}>
-          Pay Period Select
+          time select
         </Button>
       </div>
-
       <Dialog
         disableBackdropClick
         disableEscapeKeyDown
@@ -59,68 +60,40 @@ export default function DialogSelect() {
         onClose={handleClose}
       >
         <DialogTitle>Fill the form</DialogTitle>
+
         <DialogContent>
           <form className={classes.container}>
             <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="demo-dialog-native">Month</InputLabel>
+              <InputLabel htmlFor="demo-dialog-native">month</InputLabel>
               <Select
                 native
                 value={month}
                 onChange={handleChange}
                 input={<Input id="demo-dialog-native" />}
               >
-                <option aria-label="none" value="" />
-                <option value={"Jan"}>Jan</option>
-                <option value={"Feb"}>Feb</option>
-                <option value={"Mar"}>Mar</option>
-                <option value={"Apr"}>Apr</option>
-                <option value={"May"}>May</option>
-                <option value={"Jun"}>Jun</option>
-                <option value={"Jul"}>Jul</option>
-                <option value={"Aug"}>Aug</option>
-                <option value={"Sept"}>Sept</option>
-                <option value={"Oct"}>Oct</option>
-                <option value={"Nov"}>Nov</option>
-                <option value={"Dec"}>Dec</option>
+                <option aria-label="None" value="" />
+                <option value={10}>Ten</option>
+                <option value={20}>Twenty</option>
+                <option value={30}>Thirty</option>
               </Select>
             </FormControl>
-
             <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="demo-dialog-native">Year</InputLabel>
-              <Select
-                native
-                value={year}
-                onChange={handleChange}
-                input={<Input id="demo-dialog-native" />}
-              >
-                <option aria-label="none" value="" />
-                <option value={"2021"}>2021</option>
-                <option value={"2020"}>2020</option>
-                <option value={"2019"}>2019</option>
-                <option value={"2018"}>2018</option>
-                <option value={"2017"}>2017</option>
-              </Select>
-            </FormControl>
-
-            {/* <FormControl className={classes.formControl}>
-              <InputLabel id="demo-dialog-select-label">Year</InputLabel>
+              <InputLabel id="demo-dialog-select-label">year</InputLabel>
               <Select
                 labelId="demo-dialog-select-label"
                 id="demo-dialog-select"
                 value={year}
-                onChange={handleChange}
+                onChange={handleChange1}
                 input={<Input />}
               >
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value={2021}>2021</MenuItem>
-                <MenuItem value={2020}>2020</MenuItem>
-                <MenuItem value={2019}>2019</MenuItem>
-                <MenuItem value={2018}>2018</MenuItem>
-                <MenuItem value={2017}>2017</MenuItem>
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
               </Select>
-            </FormControl> */}
+            </FormControl>
           </form>
         </DialogContent>
         <DialogActions>
