@@ -1,11 +1,15 @@
 import React from "react";
+import Navbar from "../Routing/Navbar";
 import { InputGroup, FormControl, Button, Form } from "react-bootstrap";
 
 const Personnel = () => {
   return (
     <div>
-      <p1>Add Personnel</p1>
-      <div className="ui container">
+      <Navbar />
+      <p1 style={{ color: "white", marginLeft: "30px", fontSize: "40px" }}>
+        Add Personnel
+      </p1>
+      <div style={{ padding: "5%", width: "50%" }} className="ui container">
         <InputGroup className="mb-3">
           <InputGroup.Prepend>
             <InputGroup.Text id="basic-addon1">Name</InputGroup.Text>

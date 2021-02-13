@@ -8,6 +8,9 @@ const Navbar = () => {
       <div className="ui secondary pointing menu">
         <div className="ui container">
           <div className="navbar">
+            <Link href="/" className="linkToPage">
+              Home
+            </Link>
             <Link href="/overtime" className="linkToPage">
               Overtime
             </Link>

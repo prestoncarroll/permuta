@@ -44,8 +44,8 @@ const rows = [
 
 const useStyles = makeStyles({
   root: {
-    width: "80%",
-    marginLeft: "15px",
+    width: "90%",
+    marginLeft: "10px",
   },
   container: {
     maxHeight: 440,
