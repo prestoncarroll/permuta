@@ -8,6 +8,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
+import ApproveDecline from "../Buttons/ApproveDecline";
 
 const columns = [
   { id: "name", label: "Name", minWidth: 170 },
@@ -39,12 +40,12 @@ const rows = [
   createData("Preston Carroll", "4:00 am", "10:00 pm"),
   createData("Jill Spohn", "3:00 am", "6:00 pm"),
   createData("Preston Carroll", "4:00 am", "10:00 pm"),
-  
 ];
 
 const useStyles = makeStyles({
   root: {
-    width: "100%",
+    width: "80%",
+    marginLeft: "15px",
   },
   container: {
     maxHeight: 440,
@@ -120,6 +121,7 @@ export default function StickyHeadTable() {
           onChangeRowsPerPage={handleChangeRowsPerPage}
         />
       </Paper>
+      <ApproveDecline />
     </div>
   );
 }
