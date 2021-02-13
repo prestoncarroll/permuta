@@ -72,9 +72,18 @@ export default function DialogSelect() {
                 input={<Input id="demo-dialog-native" />}
               >
                 <option aria-label="None" value="" />
-                <option value={10}>Ten</option>
-                <option value={20}>Twenty</option>
-                <option value={30}>Thirty</option>
+                <option value={1}>Jan</option>
+                <option value={2}>Feb</option>
+                <option value={3}>Mar</option>
+                <option value={4}>Apr</option>
+                <option value={5}>May</option>
+                <option value={6}>Jun</option>
+                <option value={7}>Jul</option>
+                <option value={8}>Aug</option>
+                <option value={9}>Sept</option>
+                <option value={10}>Oct</option>
+                <option value={11}>Nov</option>
+                <option value={12}>Dec</option>
               </Select>
             </FormControl>
             <FormControl className={classes.formControl}>
@@ -89,9 +98,11 @@ export default function DialogSelect() {
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <MenuItem value={21}>2021</MenuItem>
+                <MenuItem value={20}>2020</MenuItem>
+                <MenuItem value={19}>2019</MenuItem>
+                <MenuItem value={18}>2018</MenuItem>
+                <MenuItem value={17}>2017</MenuItem>
               </Select>
             </FormControl>
           </form>
